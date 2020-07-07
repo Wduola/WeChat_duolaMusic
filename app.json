@@ -1,0 +1,39 @@
+{
+  "pages": ["pages/index/index", "pages/login/login", "pages/personal/personal", "pages/video/video"],
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarBackgroundColor": "#87CEEB",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "哆啦音乐",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#87ceeb",
+    "backgroundColor": "white",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/tabs/tab-home.png",
+        "selectedIconPath": "/static/images/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "/static/images/tabs/select.png",
+        "selectedIconPath": "/static/images/tabs/selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/static/images/tabs/tab-my.png",
+        "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+      }
+    ]
+  }
+}
