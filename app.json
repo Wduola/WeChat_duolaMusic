@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/login/login", "pages/personal/personal", "pages/video/video"],
+  "pages": ["pages/login/login", "pages/personal/personal", "pages/index/index", "pages/video/video"],
   "sitemapLocation": "sitemap.json",
   "window": {
     "navigationBarBackgroundColor": "#87CEEB",
