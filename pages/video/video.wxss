@@ -1,1 +1,114 @@
 /* pages/video/video.wxss */
+.videoContainer {
+  height: 100%;
+}
+/* 头部 */
+.videoHeader {
+  display: flex;
+  padding: 10rpx;
+}
+.videoImage {
+  width: 60rpx;
+  height: 60rpx;
+}
+.videoHeader input {
+  border: 1rpx solid #eee;
+  height: 60rpx;
+  flex: 1;
+  margin: 0 30rpx;
+}
+.placeholder {
+  text-align: center;
+  color: #87ceeb;
+  font-size: 28rpx;
+}
+/* 头部导航 */
+.scrollContainer {
+  display: flex;
+  white-space: nowrap;
+  margin: 20rpx 0;
+  height: 60rpx;
+}
+.scrollItem {
+  padding: 0 30rpx;
+}
+.scrollNav {
+  height: 60rpx;
+}
+.active {
+  border-bottom: 2rpx solid #87ceeb;
+  box-sizing: border-box;
+}
+/* 视屏列表 */
+.videoList {
+  /*
+    1. calc()用于动态计算宽高
+    2. 视口单位： vh vw    v:viewport  w:width h: height
+    3. 1vh = 1%视口高度  1vw=1%视口宽度
+  */
+  height: calc(100vh - 182rpx);
+}
+.videoItem {
+  padding: 0 3%;
+}
+.videoItem video {
+  width: 100%;
+  height: 360rpx;
+}
+.common {
+  width: 100%;
+  height: 360rpx;
+}
+.videoList .content {
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+.footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}

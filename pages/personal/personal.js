@@ -70,7 +70,16 @@ Page({
       coverTransition: "transform .5s linear",
     });
   },
-
+  // 跳转至登录界面
+  toLogin() {
+    // 判断用户数据是否存在
+    if (this.data.userInfo.nickname) {
+      return;
+    }
+    wx.redirectTo({
+      url: "/pages/login/login",
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -33,10 +33,11 @@ Page({
     } else {
       // 前端验证：用户名和密码均正确
       // 三、后端验证
-      let result = await request(`/login/cellphone?phone=${phone}&password=${password}`);
+      // let result = await request(`/login/cellphone?phone=${phone}&password=${password}`);
+      let result = await request(`/login/cellphone`, { phone, password, isLogin: true });
       console.log("表单验证数据：", result);
       // 提示信息
-      if (result.code === 501) {
+      if (result.code === 501 || result.code === 400) {
         // 手机号错误
         this.showToast("手机号错误");
       } else if (result.code === 502) {
@@ -48,8 +49,8 @@ Page({
 
         // 1.保存用户数据至本地setStorageSync
         wx.setStorageSync("userInfo", JSON.stringify(result.profile));
-        // 2.跳转至个人中心
-        wx.switchTab({
+        // 2.跳转至个人中心 switchTab reLaunch
+        wx.reLaunch({
           url: "/pages/personal/personal",
         });
       }
