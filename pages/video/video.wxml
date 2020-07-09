@@ -7,8 +7,9 @@
   </view>
 
   <!-- 导航 --->
-  <scroll-view class="scrollContainer" enable-flex scroll-x>
-    <view class="scrollItem" wx:for="{{videoGroupList}}" wx:key="id">
+  <scroll-view class="scrollContainer" enable-flex scroll-x scroll-into-view="{{'scroll' + navId}}"
+      scroll-with-animation>
+    <view id="{{'scroll'+item.id}}" class="scrollItem" wx:for="{{videoGroupList}}" wx:key="id">
       <view class="scrollNav {{navId===item.id?'active':''}}" id="{{item.id}}" bindtap="changeNavId">
         {{item.name}}
       </view>

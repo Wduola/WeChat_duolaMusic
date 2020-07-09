@@ -27,7 +27,7 @@ Page({
         userInfo: JSON.parse(userInfo),
       });
       // 获取用户播放信息
-      let recentPlayListData = await request(`/user/record?uid=${this.data.userInfo.userId}&type=0`);
+      let recentPlayListData = await request(`/user/record?uid=${this.data.userInfo.userId}&type=0`);
       this.setData({
         recentPlayList: recentPlayListData.allData,
       });
