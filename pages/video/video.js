@@ -118,5 +118,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {},
+  onShareAppMessage: function () {
+    console.log("点击分享");
+    return {
+      title: "哆啦音乐分享",
+      page: "/pages/video/video",
+      imageUrl: "/static/images/2.jpg",
+    };
+  },
 });

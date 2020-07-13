@@ -43,6 +43,7 @@
             <text class="iconfont icon-pinglun1"></text>
             <text class="count">{{item.data.commentCount}}</text>
           </text>
+          <!-- 分享 --->
           <button open-type="share" class="item btn">
             <text class="iconfont icon-gengduo"></text>
           </button>
